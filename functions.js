@@ -8,7 +8,7 @@ function getInitials(nomeCompleto) {
 
 // function snack 2
 function createSlug(str) {
-    return str.toLowerCase();
+    return str.toLowerCase().replaceAll(' ', '-');
 }
 
 // function snack 3 
