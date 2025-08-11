@@ -6,6 +6,12 @@ function getInitials(nomeCompleto) {
     return initials;
 }
 
+// function snack 2
+function createSlug(str) {
+    return str.toLowerCase();
+}
+
 module.exports = {
-    getInitials
+    getInitials,
+    createSlug
 }
