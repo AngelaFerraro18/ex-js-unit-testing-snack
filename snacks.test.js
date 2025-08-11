@@ -30,6 +30,7 @@ test('La funzione createSlug sostituisce gli spazi con -.', () => {
 // snack 5 
 test('La funzione isPalindrome verifica se una stringa è un palindromo.', () => {
     expect(isPalindrome('osso')).toBeTruthy();
+    expect(isPalindrome('angela')).toBeFalsy();
 });
 
 
