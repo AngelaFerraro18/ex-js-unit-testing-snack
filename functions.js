@@ -59,10 +59,24 @@ function findPostById(arr, id) {
 }
 
 
+// functions snack 8
+function addPost(arr, post) {
+    arr.push(post);
+}
+
+function removePost(arr, id) {
+    const index = arr.findIndex(p => p.id === id);
+    arr.splice(index, 1);
+}
+
+
+
 module.exports = {
     getInitials,
     createSlug,
     average,
     isPalindrome,
-    findPostById
+    findPostById,
+    addPost,
+    removePost
 }

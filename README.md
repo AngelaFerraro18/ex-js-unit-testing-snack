@@ -48,3 +48,14 @@ Creare un test che verifichi le seguenti descrizioni:
 
 
 Creare uno o più test aggiuntivi che controllino che la struttura dati passati sia conforme (ogni post ha le proprietà id, title e slug, viene passato un id numerico).
+
+## Snack 8 (Bonus)
+Creare due test che verifichino le seguenti descrizioni:
+
+👉 "Dopo aver aggiunto un post con la funzione addPost, l'array posts deve contenere un elemento in più."
+
+👉 "Dopo aver rimosso un post con la funzione removePost, l'array posts deve contenere un elemento in meno."
+
+📌 Note:
+
+Si consiglia di resettare l'array di post dopo ogni test. Ti ricordi come si fa?
