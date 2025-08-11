@@ -33,3 +33,6 @@ test('La funzione isPalindrome verifica se una stringa è un palindromo.', () =>
 
 
 //snack 6
+test('La funzione createSlug lancia un errore se il titolo è vuoto o non valido.', () => {
+    expect(() => createSlug('')).toThrow(); //devo passare la funzione ad expect che avrà il valore della funzione createSlug, in questo caso vuoto, se non faccio così l'errore verrebbe generato prima che Jest possa intercettarlo.
+})

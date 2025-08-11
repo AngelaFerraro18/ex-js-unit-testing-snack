@@ -8,6 +8,11 @@ function getInitials(nomeCompleto) {
 
 // function snack 2 - 4
 function createSlug(str) {
+
+    if (str === '') {
+        throw new Error('Il titolo è vuoto o non valido!');
+    }
+
     return str.toLowerCase().replaceAll(' ', '-');
 }
 
