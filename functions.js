@@ -6,7 +6,7 @@ function getInitials(nomeCompleto) {
     return initials;
 }
 
-// function snack 2 - 4
+// function snack 2 - 4 -6
 function createSlug(str) {
 
     if (str === '') {
@@ -32,9 +32,16 @@ function isPalindrome(str) {
     return true;
 }
 
+// function snack 7 
+function findPostById(arr, id) {
+    return arr.find(e => e.id === id);
+}
+
+
 module.exports = {
     getInitials,
     createSlug,
     average,
-    isPalindrome
+    isPalindrome,
+    findPostById
 }
