@@ -11,7 +11,14 @@ function createSlug(str) {
     return str.toLowerCase();
 }
 
+// function snack 3 
+function average(arr) {
+    const somma = arr.reduce((acc, curr) => acc + curr, 0);
+    return somma / arr.length;
+}
+
 module.exports = {
     getInitials,
-    createSlug
+    createSlug,
+    average
 }
