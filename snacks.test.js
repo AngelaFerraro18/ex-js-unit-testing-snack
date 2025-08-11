@@ -75,6 +75,20 @@ describe('Operazioni su array', () => {
         expect(posts).toHaveLength(3);
     });
 
+    //snack 9 bonus
+    test('Se si tenta di aggiungere un post con un id o uno slug già esistente, la funzione addPost deve lanciare un errore.', () => {
+        expect(() => addPost(posts, {
+            id: 4,
+            title: "test con stesso id",
+            slug: "test-con-stesso-id"
+        })).toThrow('Id già esistente!');
+
+        expect(() => addPost(posts, {
+            id: 21,
+            title: "CSS Flexbox in pratica",
+            slug: "css-flexbox-in-pratica"
+        })).toThrow('Slug già esistente!')
+    })
 });
 
 describe('Operazioni di slug', () => {

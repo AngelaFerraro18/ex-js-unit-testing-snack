@@ -61,6 +61,16 @@ function findPostById(arr, id) {
 
 // functions snack 8
 function addPost(arr, post) {
+    const ids = arr.map(p => p.id);
+    const slugs = arr.map(p => p.slug);
+
+    if (ids.includes(post.id)) {
+        throw new Error('Id già esistente!');
+    }
+
+    if (slugs.includes(post.slug)) {
+        throw new Error('Slug già esistente!')
+    }
     arr.push(post);
 }
 

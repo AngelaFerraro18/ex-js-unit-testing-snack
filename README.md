@@ -59,3 +59,12 @@ Creare due test che verifichino le seguenti descrizioni:
 📌 Note:
 
 Si consiglia di resettare l'array di post dopo ogni test. Ti ricordi come si fa?
+
+## Snack 9 (Bonus)
+Creare un test che verifichi la seguente descrizione:
+
+👉 "Se si tenta di aggiungere un post con un id o uno slug già esistente, la funzione addPost deve lanciare un errore."
+
+📌 Nota:
+
+Gli errori devono essere chiari e distinti, es. "Slug già esistente" e “Id già esistente”.
