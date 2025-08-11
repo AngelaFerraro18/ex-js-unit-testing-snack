@@ -21,6 +21,13 @@ function createSlug(str) {
 
 // function snack 3 
 function average(arr) {
+
+    arr.forEach(num => {
+        if (isNaN(num)) {
+            throw new Error('Average vuole solo numeri!');
+        }
+    });
+
     const somma = arr.reduce((acc, curr) => acc + curr, 0);
     return somma / arr.length;
 }
