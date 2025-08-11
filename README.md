@@ -68,3 +68,8 @@ Creare un test che verifichi la seguente descrizione:
 📌 Nota:
 
 Gli errori devono essere chiari e distinti, es. "Slug già esistente" e “Id già esistente”.
+
+## Snack 10 (Bonus): createSlug() – Incrementare lo slug se esiste già
+Creare un test che verifichi la seguente descrizione:
+
+👉 "Se viene passato un array di post come secondo argomento, la funzione createSlug incrementa di 1 se lo slug esiste già."

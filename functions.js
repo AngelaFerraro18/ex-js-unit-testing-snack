@@ -10,13 +10,24 @@ function getInitials(nomeCompleto) {
 }
 
 // function snack 2 - 4 -6
-function createSlug(str) {
+function createSlug(str, posts) {
 
     if (!str) {
         throw new Error('Il titolo è vuoto o non valido!');
     }
 
-    return str.toLowerCase().replaceAll(' ', '-');
+    let slug = str.toLowerCase().replaceAll(' ', '-');
+
+    if (posts) {
+        for (let i = 0; i < posts.length; i++) {
+            const post = posts[i];
+            if (post.slug === slug) {
+                return slug + '-1';
+            }
+        }
+    }
+
+    return slug;
 }
 
 // function snack 3 

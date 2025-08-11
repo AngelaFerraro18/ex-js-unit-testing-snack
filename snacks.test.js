@@ -1,6 +1,34 @@
 const { getInitials, createSlug, average, isPalindrome, findPostById, addPost, removePost } = require("./functions");
 
 
+let posts;
+
+beforeEach(() => posts = [
+    {
+        id: 1,
+        title: "Introduzione a JavaScript",
+        slug: "introduzione-a-javascript"
+    },
+    {
+        id: 2,
+        title: "Come usare React",
+        slug: "come-usare-react"
+    },
+    {
+        id: 3,
+        title: "Guida a Node.js",
+        slug: "guida-a-node-js"
+    },
+    {
+        id: 4,
+        title: "CSS Flexbox in pratica",
+        slug: "css-flexbox-in-pratica"
+    }
+]);
+
+afterEach(() => posts = []);
+
+
 describe('Manipolazione di stringhe', () => {
     // snack 1 
     test('La funzione getInitials restituisce le iniziali di un nome completo.', () => {
@@ -24,32 +52,6 @@ describe('Operazioni su array', () => {
         expect(() => average([10, 'cane'])).toThrow();
     });
 
-    let posts;
-
-    beforeEach(() => posts = [
-        {
-            id: 1,
-            title: "Introduzione a JavaScript",
-            slug: "introduzione-a-javascript"
-        },
-        {
-            id: 2,
-            title: "Come usare React",
-            slug: "come-usare-react"
-        },
-        {
-            id: 3,
-            title: "Guida a Node.js",
-            slug: "guida-a-node-js"
-        },
-        {
-            id: 4,
-            title: "CSS Flexbox in pratica",
-            slug: "css-flexbox-in-pratica"
-        }
-    ]);
-
-    afterEach(() => posts = []);
 
     // snack 7
     test('La funzione findPostById restituisce il post corretto dato l’array di post e l’id', () => {
@@ -108,6 +110,17 @@ describe('Operazioni di slug', () => {
     test('La funzione createSlug lancia un errore se il titolo è vuoto o non valido.', () => {
         expect(() => createSlug('')).toThrow(); //devo passare la funzione ad expect che avrà il valore della funzione createSlug, in questo caso vuoto, se non faccio così l'errore verrebbe generato prima che Jest possa intercettarlo.
     });
+
+    // snack 10 bonus
+    test('Se viene passato un array di post come secondo argomento, la funzione createSlug incrementa di 1 se lo slug esiste già.', () => {
+        expect(createSlug('Come usare React', posts)).toBe('come-usare-react-1');
+        addPost(posts, {
+            id: 5,
+            title: "Come usare React",
+            slug: createSlug('Come usare React', posts)
+        });
+        expect(posts[posts.length - 1].slug).toBe('come-usare-react-1');
+    })
 
 });
 
