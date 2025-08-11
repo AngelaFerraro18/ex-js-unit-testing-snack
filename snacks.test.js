@@ -2,8 +2,8 @@ const { getInitials, createSlug, average, isPalindrome, findPostById } = require
 
 // snack 1 
 test('La funzione getInitials restituisce le iniziali di un nome completo.', () => {
-    expect(getInitials('Angela Ferraro')).toContain('AF');
-    expect(getInitials('Mario Rossi')).toContain('MR');
+    expect(getInitials('Angela Ferraro')).toBe('AF');
+    expect(getInitials('Mario Rossi')).toBe('MR');
 });
 
 

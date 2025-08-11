@@ -1,9 +1,12 @@
 // function snack 1
 function getInitials(nomeCompleto) {
-    const splittedName = nomeCompleto.split(' ');
-    const initials = splittedName[0][0].toUpperCase() + splittedName[1][0].toUpperCase();
+    // const splittedName = nomeCompleto.split(' ');
+    // const initials = splittedName[0][0].toUpperCase() + splittedName[1][0].toUpperCase();
 
-    return initials;
+    // return initials;
+
+    const [nome, cognome] = nomeCompleto.split(' ').filter(str => str !== '');
+    return `${nome.charAt(0).toUpperCase()}${cognome.charAt(0).toUpperCase()}`
 }
 
 // function snack 2 - 4 -6
