@@ -73,6 +73,10 @@ test('La funzione findPostById restituisce il post corretto dato l’array di po
         title: "Come usare React",
         slug: "come-usare-react"
     });
+    expect(() => findPostById(posts, 'gatto')).toThrow("'gatto' non è un id.");
+    expect(() => findPostById([4, 25, 55], 2)).toThrow("L'array non è nel formato corretto!");
+    expect(findPostById(posts, 6)).toBe(null);
+
 });
 
 

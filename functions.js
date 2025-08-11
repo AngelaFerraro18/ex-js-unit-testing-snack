@@ -44,7 +44,18 @@ function isPalindrome(str) {
 
 // function snack 7 
 function findPostById(arr, id) {
-    return arr.find(e => e.id === id);
+
+    if (isNaN(id)) {
+        throw new Error(`'${id}' non è un id.`)
+    };
+
+    arr.forEach(p => {
+        if (p.id === undefined || p.title === undefined || p.slug === undefined) {
+            throw new Error("L'array non è nel formato corretto!")
+        }
+    });
+
+    return arr.find(e => e.id === id) || null;
 }
 
 
