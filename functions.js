@@ -6,7 +6,7 @@ function getInitials(nomeCompleto) {
     return initials;
 }
 
-// function snack 2
+// function snack 2 - 4
 function createSlug(str) {
     return str.toLowerCase().replaceAll(' ', '-');
 }
@@ -17,8 +17,19 @@ function average(arr) {
     return somma / arr.length;
 }
 
+//function snack 5
+function isPalindrome(str) {
+    for (let i = 0; i < str.length / 2; i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
+}
+
 module.exports = {
     getInitials,
     createSlug,
-    average
+    average,
+    isPalindrome
 }
